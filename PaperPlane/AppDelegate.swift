@@ -3,7 +3,7 @@
 //  PaperPlane
 //
 //  Created by Kenneth Zhang on 16/4/11.
-//  Copyright © 2016年 Kenneth Zhang. All rights reserved.
+//  Copyright © 2016年 me.yzo. All rights reserved.
 //
 
 import UIKit
@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let viewController = ViewController()
+        
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window!.rootViewController = viewController
+        window!.backgroundColor = .whiteColor()
+        window!.makeKeyAndVisible()
+        
         return true
     }
 

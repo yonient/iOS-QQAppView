@@ -1,14 +1,14 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  PaperPlane
 //
 //  Created by Kenneth Zhang on 16/4/11.
-//  Copyright © 2016年 Kenneth Zhang. All rights reserved.
+//  Copyright © 2016年 me.yzo. All rights reserved.
 //
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class SpaceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
