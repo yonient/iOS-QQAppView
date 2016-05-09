@@ -20,6 +20,8 @@
 		67C3158F1CBBC007005B902B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C3158E1CBBC007005B902B /* Assets.xcassets */; };
 		67C315921CBBC007005B902B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C315901CBBC007005B902B /* LaunchScreen.storyboard */; };
 		67C3159D1CBBC007005B902B /* PaperPlaneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3159C1CBBC007005B902B /* PaperPlaneTests.swift */; };
+		67FF59AD1CE0E1F000AA5965 /* Readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 67FF59AC1CE0E1F000AA5965 /* Readme.md */; };
+		67FF59AF1CE0E2D000AA5965 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 67FF59AE1CE0E2D000AA5965 /* demo.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		67C315981CBBC007005B902B /* PaperPlane.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaperPlane.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67C3159C1CBBC007005B902B /* PaperPlaneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperPlaneTests.swift; sourceTree = "<group>"; };
 		67C3159E1CBBC007005B902B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67FF59AC1CE0E1F000AA5965 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		67FF59AE1CE0E2D000AA5965 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = demo.gif; path = ../../../Desktop/demo.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 		67C315791CBBC007005B902B = {
 			isa = PBXGroup;
 			children = (
+				67FF59AE1CE0E2D000AA5965 /* demo.gif */,
+				67FF59AC1CE0E1F000AA5965 /* Readme.md */,
 				67C315841CBBC007005B902B /* PaperPlane */,
 				67C3159B1CBBC007005B902B /* PaperPlaneTests */,
 				67C315831CBBC007005B902B /* Products */,
@@ -208,6 +214,7 @@
 			files = (
 				67C315921CBBC007005B902B /* LaunchScreen.storyboard in Resources */,
 				67C3158F1CBBC007005B902B /* Assets.xcassets in Resources */,
+				67FF59AF1CE0E2D000AA5965 /* demo.gif in Resources */,
 				67C3158D1CBBC007005B902B /* Main.storyboard in Resources */,
 				672372901CBBE9BD00ED0E00 /* LeftSlideMenu.xib in Resources */,
 			);
@@ -235,6 +242,7 @@
 				67381F001CBFB57300F81C7A /* LeftSlideMenuController.swift in Sources */,
 				67C315861CBBC007005B902B /* AppDelegate.swift in Sources */,
 				67C315881CBBC007005B902B /* ContactViewController.swift in Sources */,
+				67FF59AD1CE0E1F000AA5965 /* Readme.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
