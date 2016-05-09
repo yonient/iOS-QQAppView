@@ -17,15 +17,15 @@ class TabBarController: UITabBarController {
         let contactVC = ContactViewController()
         let spaceVC = SpaceViewController()
         
-        let recentNav = NavigationController(rootViewController: recentVC)
-        let contactNav = NavigationController(rootViewController: contactVC)
-        let spaceNav = NavigationController(rootViewController: spaceVC)
+        let recentNav = UINavigationController(rootViewController: recentVC)
+        let contactNav = UINavigationController(rootViewController: contactVC)
+        let spaceNav = UINavigationController(rootViewController: spaceVC)
         
         let controllers = [recentNav, contactNav, spaceNav]
         self.viewControllers = controllers
         
-        recentNav.tabBarItem = UITabBarItem(title: "消息", image: nil, tag: 1)
+        recentNav.tabBarItem = UITabBarItem(title: "消息", image: UIImage(named: "message"), tag: 1)
         contactNav.tabBarItem = UITabBarItem(title: "联系人", image: UIImage(named: "contactIcon"), tag: 2)
-        spaceNav.tabBarItem = UITabBarItem(title: "动态", image: nil, tag: 2)
+        spaceNav.tabBarItem = UITabBarItem(title: "动态", image: UIImage(named: "star"), tag: 2)
     }
 }

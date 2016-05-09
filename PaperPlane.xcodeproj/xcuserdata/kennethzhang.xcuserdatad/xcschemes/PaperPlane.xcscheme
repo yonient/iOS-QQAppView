@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "67C315971CBBC007005B902B"
-               BuildableName = "PaperPlaneTests.xctest"
+               BuildableName = "PaperPlane.xctest"
                BlueprintName = "PaperPlaneTests"
                ReferencedContainer = "container:PaperPlane.xcodeproj">
             </BuildableReference>

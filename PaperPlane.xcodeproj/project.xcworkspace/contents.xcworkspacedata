@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:PaperPlane.xcodeproj">
+      location = "self:/Volumes/Development/Development/iOS/QQView/PaperPlane.xcodeproj">
    </FileRef>
 </Workspace>

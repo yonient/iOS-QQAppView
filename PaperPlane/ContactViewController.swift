@@ -28,6 +28,8 @@ class ContactViewController: UIViewController {
         navigationTitle.textColor = UIColor.whiteColor()
         
         titleView.addSubview(navigationTitle)
+        
+        self.view.backgroundColor = .whiteColor()
     }
 
     override func didReceiveMemoryWarning() {

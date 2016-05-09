@@ -14,7 +14,6 @@ class RecentViewController: UIViewController {
     private var telephoneTableView: UITableView!
     private var searchController: UISearchController!
     private var leftSlideMenuController: LeftSlideMenuController!
-    var test = "123"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +25,9 @@ class RecentViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor(red: 0, green: 183/255, blue: 242/255, alpha: 1)
         navigationItem.rightBarButtonItem = rightAddButton
         
-        let leftImageButton = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        let leftImageButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         leftImageButton.setBackgroundImage(UIImage(named: "testLogo"), forState: .Normal)
-        leftImageButton.layer.cornerRadius = 20
+        leftImageButton.layer.cornerRadius = 15
         leftImageButton.layer.masksToBounds = true
         let leftImageBarButton = UIBarButtonItem(customView: leftImageButton)
         navigationItem.leftBarButtonItem = leftImageBarButton
@@ -85,12 +84,11 @@ class RecentViewController: UIViewController {
     func switchSegment(segment: UISegmentedControl) {
         switch segment.selectedSegmentIndex {
         case 0:
-            addRecentTableView()
+            telephoneTableView.removeFromSuperview()
             break;
         case 1:
-            recentTableView.removeFromSuperview()
             telephoneTableView = UITableView(frame: view.bounds)
-            
+            view.addSubview(telephoneTableView)
             break;
         default:
             break;

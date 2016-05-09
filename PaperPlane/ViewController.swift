@@ -72,8 +72,6 @@ class ViewController: UIViewController {
             let selectedView = self.homeTabBarController.selectedViewController as? UINavigationController
             let avatarBarButton = selectedView?.visibleViewController?.navigationItem.leftBarButtonItem
             
-            print(avatarBarButton?.customView)
-            
             avatarBarButton?.customView?.layer.opacity = 0
             }, completion: nil)
         
@@ -94,5 +92,9 @@ class ViewController: UIViewController {
             
             avatarBarButton?.customView?.layer.opacity = 1
             }, completion: nil)
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
 }
