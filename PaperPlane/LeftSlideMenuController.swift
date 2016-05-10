@@ -16,6 +16,8 @@ class LeftSlideMenuController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var cityButton: UIButton!
     
     private var backgroundImageView: UIImageView!
+    var delegate: SlideMenuDelegate?
+    var closeDelegate: CloseSlideMenuDelegate?
     
     // 左边栏功能
     let slidebarFunction = ["激活会员","QQ钱包","个性装扮","我的收藏","我的相册","我的文件"]
@@ -83,5 +85,11 @@ class LeftSlideMenuController: UIViewController, UITableViewDelegate, UITableVie
         let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alterWindows.addAction(okAction)
         self.presentViewController(alterWindows, animated: true, completion: nil)
+    }
+    
+
+    @IBAction func pressQRButton(sender: UIButton) {
+        delegate?.showQRCode()
+        closeDelegate?.closeSlideMenu()
     }
 }

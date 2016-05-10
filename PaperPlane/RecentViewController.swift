@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecentViewController: UIViewController {
+class RecentViewController: UIViewController, SlideMenuDelegate {
     
     private var recentTableView: UITableView!
     private var telephoneTableView: UITableView!
@@ -95,6 +95,10 @@ class RecentViewController: UIViewController {
         }
     }
     
+    func showQRCode() {
+        print("aaa")
+        self.navigationController?.pushViewController(QRViewController(), animated: true)
+    }
 }
 
 extension RecentViewController: UITableViewDataSource {

@@ -27,5 +27,7 @@ class TabBarController: UITabBarController {
         recentNav.tabBarItem = UITabBarItem(title: "消息", image: UIImage(named: "message"), tag: 1)
         contactNav.tabBarItem = UITabBarItem(title: "联系人", image: UIImage(named: "contactIcon"), tag: 2)
         spaceNav.tabBarItem = UITabBarItem(title: "动态", image: UIImage(named: "star"), tag: 2)
+        
+        
     }
 }
