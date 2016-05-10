@@ -39,7 +39,7 @@ class ViewController: UIViewController, CloseSlideMenuDelegate {
         
         panGesture = UIPanGestureRecognizer(target: self, action: #selector(ViewController.pan(_:)))
 //        availabelArea.addGestureRecognizer(panGesture)
-        self.view.addGestureRecognizer(panGesture)
+        self.homeTabBarController.view.addGestureRecognizer(panGesture)
         
         slideMenu.delegate = selectedView?.visibleViewController as? SlideMenuDelegate
         slideMenu.closeDelegate = self
@@ -90,7 +90,7 @@ class ViewController: UIViewController, CloseSlideMenuDelegate {
     func presentSlideMenu() {
         // 给首页 加入 点击自动关闭侧滑菜单功能
         tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissSlideMenu(_:)))
-        self.view.addGestureRecognizer(tapGesture)
+        self.homeTabBarController.view.addGestureRecognizer(tapGesture)
         
         print("该出现了")
         // 计算距离，执行菜单自动滑动动画
@@ -112,6 +112,8 @@ class ViewController: UIViewController, CloseSlideMenuDelegate {
     }
     
     func dismissSlideMenu(recongnizer: UITapGestureRecognizer) {
+        let currentPressPoint = panGesture.locationInView(self.view)
+        if CGPathContainsPoint(availableArea, nil, currentPressPoint, false) {
             print("该消失了")
             let slideMenuDistance = UIScreen.mainScreen().bounds.size.width * 0.2
             
@@ -126,6 +128,7 @@ class ViewController: UIViewController, CloseSlideMenuDelegate {
                 
                 avatarBarButton?.customView?.layer.opacity = 1
                 }, completion: nil)
+        }
     }
     
     func closeSlideMenu() {
@@ -135,7 +138,6 @@ class ViewController: UIViewController, CloseSlideMenuDelegate {
     }
     
     func backFromNavigation() {
-        self.view.addGestureRecognizer(tapGesture)
         self.view.addGestureRecognizer(panGesture)
     }
     

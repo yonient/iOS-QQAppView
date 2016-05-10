@@ -16,6 +16,7 @@
 		672F02CF1CBBD0E7004253F5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672F02CE1CBBD0E7004253F5 /* LoginViewController.swift */; };
 		67381F001CBFB57300F81C7A /* LeftSlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67381EFF1CBFB57300F81C7A /* LeftSlideMenuController.swift */; };
 		67569DB11CE1DB0500DCD90A /* CloseSlideMenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67569DB01CE1DB0500DCD90A /* CloseSlideMenuDelegate.swift */; };
+		67569DB31CE2381D00DCD90A /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 67569DB21CE2381D00DCD90A /* demo.gif */; };
 		67C315861CBBC007005B902B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C315851CBBC007005B902B /* AppDelegate.swift */; };
 		67C315881CBBC007005B902B /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C315871CBBC007005B902B /* ContactViewController.swift */; };
 		67C3158A1CBBC007005B902B /* SpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C315891CBBC007005B902B /* SpaceViewController.swift */; };
@@ -24,7 +25,6 @@
 		67C315921CBBC007005B902B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C315901CBBC007005B902B /* LaunchScreen.storyboard */; };
 		67C3159D1CBBC007005B902B /* PaperPlaneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C3159C1CBBC007005B902B /* PaperPlaneTests.swift */; };
 		67FF59AD1CE0E1F000AA5965 /* Readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 67FF59AC1CE0E1F000AA5965 /* Readme.md */; };
-		67FF59B31CE0E36A00AA5965 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 67FF59B21CE0E36A00AA5965 /* demo.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +47,7 @@
 		672F02CE1CBBD0E7004253F5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		67381EFF1CBFB57300F81C7A /* LeftSlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSlideMenuController.swift; sourceTree = "<group>"; };
 		67569DB01CE1DB0500DCD90A /* CloseSlideMenuDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseSlideMenuDelegate.swift; sourceTree = "<group>"; };
+		67569DB21CE2381D00DCD90A /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 		67C315821CBBC007005B902B /* PaperPlane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperPlane.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67C315851CBBC007005B902B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67C315871CBBC007005B902B /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +60,6 @@
 		67C3159C1CBBC007005B902B /* PaperPlaneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperPlaneTests.swift; sourceTree = "<group>"; };
 		67C3159E1CBBC007005B902B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67FF59AC1CE0E1F000AA5965 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
-		67FF59B21CE0E36A00AA5965 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,7 @@
 		67C315791CBBC007005B902B = {
 			isa = PBXGroup;
 			children = (
-				67FF59B21CE0E36A00AA5965 /* demo.gif */,
+				67569DB21CE2381D00DCD90A /* demo.gif */,
 				67FF59AC1CE0E1F000AA5965 /* Readme.md */,
 				67C315841CBBC007005B902B /* PaperPlane */,
 				67C3159B1CBBC007005B902B /* PaperPlaneTests */,
@@ -190,6 +190,7 @@
 				TargetAttributes = {
 					67C315811CBBC007005B902B = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = DXXQCQRCWP;
 					};
 					67C315971CBBC007005B902B = {
 						CreatedOnToolsVersion = 7.3;
@@ -223,7 +224,7 @@
 			files = (
 				67C315921CBBC007005B902B /* LaunchScreen.storyboard in Resources */,
 				67C3158F1CBBC007005B902B /* Assets.xcassets in Resources */,
-				67FF59B31CE0E36A00AA5965 /* demo.gif in Resources */,
+				67569DB31CE2381D00DCD90A /* demo.gif in Resources */,
 				67C3158D1CBBC007005B902B /* Main.storyboard in Resources */,
 				672372901CBBE9BD00ED0E00 /* LeftSlideMenu.xib in Resources */,
 			);
