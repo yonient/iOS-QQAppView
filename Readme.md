@@ -19,7 +19,7 @@ iOS 高仿QQ界面，纯 Swift 编写。 \_(:з」∠)\_
 
 截个图~
 
-![image](https://raw.githubusercontent.com/yonient/iOS-QQAppView/master/demo.gif)
+![image](https://raw.githubusercontent.com/yonient/iOS-QQAppView/master/slideDemo.gif)
 
 -------------
 
