@@ -20,9 +20,9 @@ class LeftSlideMenuController: UIViewController, UITableViewDelegate, UITableVie
     var closeDelegate: CloseSlideMenuDelegate?
     
     // 左边栏功能
-    let slidebarFunction = ["激活会员","QQ钱包","个性装扮","我的收藏","我的相册","我的文件"]
+    let slidebarFunction = ["Swift","Github","@yonient","http://yzo.me","Kenneth","Zhang"]
     // 左边栏图标
-    let slidebarIcon = ["激活会员":"vip","QQ钱包":"wallet","个性装扮":"style","我的收藏":"favorite","我的相册":"gallery","我的文件":"file"]
+    let slidebarIcon = ["Swift":"vip","Github":"wallet","@yonient":"style","http://yzo.me":"favorite","Kenneth":"gallery","Zhang":"file"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
