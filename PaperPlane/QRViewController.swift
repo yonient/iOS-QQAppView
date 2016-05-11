@@ -16,6 +16,7 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     var viewController: ViewController?
     
     override func viewDidLoad() {
+        self.tabBarController?.tabBar.hidden = true
         let captureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
         
         do {
@@ -45,6 +46,7 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     override func viewWillDisappear(animated: Bool) {
         let viewController = UIApplication.sharedApplication().keyWindow?.rootViewController as? ViewController
         viewController?.backFromNavigation()
+        self.tabBarController?.tabBar.hidden = false
     }
     
 }

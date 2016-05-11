@@ -19,15 +19,16 @@ class RecentViewController: UIViewController, SlideMenuDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let rightAddButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: nil)
-        rightAddButton.tintColor = .whiteColor()
         navigationController?.navigationBar.translucent = false
         navigationController?.navigationBar.barTintColor = UIColor(red: 0, green: 183/255, blue: 242/255, alpha: 1)
+        
+        let rightAddButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: nil)
+        rightAddButton.tintColor = .whiteColor()
         navigationItem.rightBarButtonItem = rightAddButton
         
-        let leftImageButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        let leftImageButton = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         leftImageButton.setBackgroundImage(UIImage(named: "testLogo"), forState: .Normal)
-        leftImageButton.layer.cornerRadius = 15
+        leftImageButton.layer.cornerRadius = 20
         leftImageButton.layer.masksToBounds = true
         let leftImageBarButton = UIBarButtonItem(customView: leftImageButton)
         navigationItem.leftBarButtonItem = leftImageBarButton
