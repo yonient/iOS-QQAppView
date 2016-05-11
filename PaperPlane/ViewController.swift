@@ -51,36 +51,49 @@ class ViewController: UIViewController, CloseSlideMenuDelegate {
     }
     
     func pan(recongnizer: UIPanGestureRecognizer) {
-        let currentPressPoint = panGesture.locationInView(self.homeTabBarController.view)
-        
+        let currentPressPoint = panGesture.locationInView(self.view)
         if CGPathContainsPoint(availableArea, nil, currentPressPoint, false) {
             let x = recongnizer.translationInView(self.homeTabBarController.view).x
             let velocityx = 0.2 * recongnizer.velocityInView(self.homeTabBarController.view).x
-            print(x)
-            print(velocityx)
-            createAvailableArea(currentPressPoint.x)
             if recongnizer.state == .Changed {
-                if recongnizer.view!.frame.origin.x < 0.75 * UIScreen.mainScreen().bounds.size.width {
-                    recongnizer.view!.center.x += x
-                    self.slideMenu.view.center.x += x * 3 / 8
-                    recongnizer.setTranslation(CGPoint(x: 0,y: 0), inView: self.view)
-                    
-                    // 头像透明
-                    let selectedView = self.homeTabBarController.selectedViewController as? UINavigationController
-                    let avatarBarButton = selectedView?.visibleViewController?.navigationItem.leftBarButtonItem
-                    
-                    avatarBarButton?.customView?.layer.opacity -= 0.009
+                if recongnizer.view!.frame.origin.x == 0 && x < 0 {
+                    return
+                }
+                if recongnizer.view!.frame.origin.x == 0.8 * UIScreen.mainScreen().bounds.width && x > 0 {
+                    return
+                }
+                if recongnizer.view!.frame.origin.x <= 0.8 * UIScreen.mainScreen().bounds.size.width {
+                        createAvailableArea(currentPressPoint.x)
+                        recongnizer.view!.center.x += x
+                        self.slideMenu.view.center.x += x * 3 / 8
+                        recongnizer.setTranslation(CGPoint(x: 0,y: 0), inView: self.view)
+                        
+                        // 头像透明
+                        let selectedView = self.homeTabBarController.selectedViewController as? UINavigationController
+                        let avatarBarButton = selectedView?.visibleViewController?.navigationItem.leftBarButtonItem
+                        
+                        avatarBarButton?.customView?.layer.opacity -= 0.009
                 }
             }
             if recongnizer.state == .Ended {
-                if recongnizer.view!.center.x >= UIScreen.mainScreen().bounds.size.width * (5 / 6) || velocityx > 80 {
-                    print("yes")
-                    presentSlideMenu()
-                } else {
+                if velocityx < -80 {
                     print("no")
                     dismissSlideMenu()
+                    return
+                } else if velocityx > 80 {
+                    print("yes")
+                    presentSlideMenu()
+                    return
                 }
-                return
+                if recongnizer.view!.center.x < UIScreen.mainScreen().bounds.size.width * (5 / 6) {
+                    print("no")
+                    dismissSlideMenu()
+                    return
+                } else {
+                    print("yes")
+                    presentSlideMenu()
+                    return
+                }
             }
         }
     }
@@ -110,7 +123,7 @@ class ViewController: UIViewController, CloseSlideMenuDelegate {
     }
     
     func dismissSlideMenu(recongnizer: UITapGestureRecognizer) {
-        let currentPressPoint = panGesture.locationInView(self.view)
+        let currentPressPoint = tapGesture.locationInView(self.view)
         if CGPathContainsPoint(availableArea, nil, currentPressPoint, false) {
             print("该消失了")
             
